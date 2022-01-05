@@ -1,0 +1,13 @@
+SUMMARY OF THE MAIN STEPS OF THE PROJECT
+Main goal: studying the "push" that a festival can have on the contestants and find out if the effect extends to similar artists
+Case study: Maneskin (and other participants) at Eurovision 2021
+
+1. Collecting Tweets of users mentioning Eurovision 2021 participants (@ and #) in the time span April 1 - September 1 2021
+2. Cleaning the Tweets and sending them to prof. Erseghe for word counting
+3. Building a bipartite network where nodes are users and artists, connected by edges which weight is determined by the number of Tweets in which the user mentioned
+   the artist and (optionally) their feelings towards them. The evolution of the network in the considered time span will be of interest
+4. (Optional) Build a semantic network for each artist and find centrality correlation (suggested by prof. Erseghe)
+5. Build a second network, this time the nodes are only artists. Edges are weighted using the previous network as a proximity measure (the stronger the link, the more
+   listeners in common)
+6. Study of the temporal evolution of the networks and graphs
+7. (Very optional) See if the same phenomenon happened in previous versions of Eurovision
