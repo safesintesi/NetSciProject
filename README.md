@@ -19,3 +19,7 @@
 7) check differences between befor and after eurovision
 
 7.b) maybe check older eurovision verions
+
+NOTES
+
+April 1 - September 1
