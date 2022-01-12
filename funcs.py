@@ -19,8 +19,9 @@ def crateQuery(line):
     #search
     keywords = []
     for x in line.split("-"):
-        keywords.append(x.strip().replace("#", "%23").replace("@", "%40"))
+        keywords.append(x.strip()) #.replace("#", "%23").replace("@", "%40")
     query = " OR ".join(keywords)
+    return query
 
 def create_headers(bearer_token):
     headers = {"Authorization": "Bearer {}".format(bearer_token)}
@@ -58,7 +59,7 @@ def get_data(headers, keyword, start_time, end_time, next_token, env_label, endp
             next_token = json_response["next"]
         else:
             next_token = None
-        x += 1
+        #x += 1
         time.sleep(1)
     
     return results
@@ -77,5 +78,5 @@ def get_single_response(headers, keyword, start_time, end_time, env_label, endpo
 if __name__ == "__main__":
     os.environ['TOKEN'] = getToken()
     headers = create_headers(os.environ['TOKEN'])
-    tweets = get_single_response("COVID19 lang:en", "202104010000", "202109010000", "NetworkScience1", "fullarchive")
+    tweets = get_single_response(headers, "COVID19 lang:en", "202104010000", "202109010000", "NetworkScience1", "fullarchive")
     print(tweets)

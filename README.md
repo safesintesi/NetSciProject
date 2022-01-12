@@ -16,7 +16,7 @@
  
 NOTES
 
-April 1 - September 1
+April 1 - August 1
 
 # HOW TO RUN THE CODE
 0) make sure to set up your dev environments
