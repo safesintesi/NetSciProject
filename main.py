@@ -1,6 +1,3 @@
-import os
-from pathlib import Path
-import twitter as tw
 import pandas as pd
 import linecache as lc
 import funcs as lib

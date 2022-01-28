@@ -1,6 +1,5 @@
 import os
-import requests 
-import pandas as pd 
+import requests
 import time
 from pathlib import Path
 
