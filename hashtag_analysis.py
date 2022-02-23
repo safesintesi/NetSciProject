@@ -24,7 +24,7 @@ def retrieve_hashtags(df: pd.DataFrame):
 
 print("reading df")
 tweet_df = pd.read_pickle("./tweets/"+ name +".pkl")
-result_df = pd.read_csv("./results/"+ name +"_liwc.csv")
+result_df = pd.read_csv("./results_liwc/"+ name +"_liwc.csv")
 #result_df = pd.read_excel("./results/"+ name +"_liwc.xlsx")
 
 print("merging df")
