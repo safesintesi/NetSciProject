@@ -24,13 +24,13 @@ def retrieve_hashtags(df: pd.DataFrame):
 
 print("reading df")
 tweet_df = pd.read_pickle("./tweets/"+ name +".pkl")
-#result_df = pd.read_csv("./results_liwc/"+ name +"_liwc.csv")
-result_df = pd.read_excel("./results_liwc/"+ name +"_liwc.xlsx")
+result_df = pd.read_csv("./results_liwc/"+ name +"_liwc.csv", dtype={'id': 'str'})
+#result_df = pd.read_excel("./results_liwc/"+ name +"_liwc.xlsx")
 
 print("merging df")
 tweet_df = tweet_df[["id","created_at","entities"]]
-result_df = result_df[["created_at","Tone"]]
-df = pd.merge(tweet_df, result_df, on='created_at', how="inner")
+result_df = result_df[["id","Tone"]]
+df = pd.merge(tweet_df, result_df, on='id', how="inner")
 
 #splitting df dates
 dfs = []
