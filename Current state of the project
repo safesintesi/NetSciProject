@@ -1,0 +1,26 @@
+WHAT HAS BEEN DONE SO FAR
+
+The main idea is the study and comparison of the popularity boost gained by Eurovision 2021 winners, with a focus on Maneskin because they arrived 
+first place and they're a good case study in general.
+
+1. The tweets
+We have retrieved tweets regarding the first 6 artists classified in the timespan May 10 - June 6. This has been done gathering all tweets containing
+mentions of the official accounts of the artists or hashtags related to them. Each artist has its own set of tweets in .pkl format. Then, every set of
+tweets has been split into 4 weeks and also converted to .csv. Finally, the english tweets from each artist have been extracted, their text has been
+cleaned, and only some relevant columns have been kept, in order to produce an input file for the sentiment analysis software (the LIWC). The same has
+been done with the italian Maneskin tweets because I found an italian sentiment dictionary that could be used (the Sentix).
+All tweets are available in the "tweets" folder.
+
+2. Sentiment analysis
+Sentiment analysis of the english tweets has been automatically performed by the LIWC. The results can be found in the results_liwc.zip file.
+For italian tweets, the tone of each tweet has been calculated with a script that averaged on the sentiment of each (relevant) word, that being
+obtained by matching tokenized words with the ones contained in the Sentix dictionary. The .csv with all the italian Maneskin tweets and their respective
+emotional tone can be found in the folder (TO BE UPLOADED).
+
+3. The modularity analysis
+
+4. The hashtags network
+
+WHAT NEEDS TO BE DONE
+
+NOTES
