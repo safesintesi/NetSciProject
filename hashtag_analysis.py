@@ -7,7 +7,7 @@ def retrieve_hashtags(df: pd.DataFrame):
     for row in df.itertuples():
         ent = row.entities
         tone = row.Tone
-        if "hashtags" in ent.keys():
+        if (type(ent) is not float) and ("hashtags" in ent.keys()): #if NaN ent is float
             for ha in ent["hashtags"]:
                 ha = ha["tag"].lower()
                 if ha not in hashtags.keys():
@@ -24,13 +24,13 @@ def retrieve_hashtags(df: pd.DataFrame):
 
 print("reading df")
 tweet_df = pd.read_pickle("./tweets/"+ name +".pkl")
-result_df = pd.read_csv("./results_liwc/"+ name +"_liwc.csv")
-#result_df = pd.read_excel("./results/"+ name +"_liwc.xlsx")
+#result_df = pd.read_csv("./results_liwc/"+ name +"_liwc.csv")
+result_df = pd.read_excel("./results_liwc/"+ name +"_liwc.xlsx")
 
 print("merging df")
 tweet_df = tweet_df[["id","created_at","entities"]]
-result_df = result_df[["id","Tone"]]
-df = pd.merge(tweet_df, result_df, on='id', how="inner")
+result_df = result_df[["created_at","Tone"]]
+df = pd.merge(tweet_df, result_df, on='created_at', how="inner")
 
 #splitting df dates
 dfs = []
@@ -42,8 +42,8 @@ dfs.append(df.loc[df['created_at'] < '2021-05-17T00:00:00.000Z'])
 i = 0
 for x in dfs:
     print("retrieving hashtags" + str(i))
+    print(x)
     hashtags = retrieve_hashtags(x)
-    print(x.head())
 
     print("writing data" + str(i))
     filename = './tags/' + name + "_" + str(i) + '_tags.csv'
