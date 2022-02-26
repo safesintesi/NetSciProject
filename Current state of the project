@@ -18,9 +18,28 @@ obtained by matching tokenized words with the ones contained in the Sentix dicti
 emotional tone can be found in the folder (TO BE UPLOADED).
 
 3. The modularity analysis
+Semantic networks have been created for each week of Maneskin tweets, both italian and english. The nodes are the words, they include the number of times
+the word has been used during the week in the count field. The edges link together words that appear in the same tweet, and their weight is how many times
+that happens. For each network, many metrics have been extracted and a filtered version of it has been visualized with words of different colour based on
+the modularity class (community) they belong to and word size depending on their eigenvector centrality. Filtering was needed in order to obtain a clean
+representation, and the choice was to hide words used only once in the case of italian tweets, and hide words used less than 8 times for english tweets
+because they were many more. All the extracted metrics + details on the procedure can be found in the Maneskin Semantic Network - Modularity Analysis.zip
+file. The main outcome of this analysis was the following: it appears that starting from the 2nd week and especially during the 3rd one, people's opinion
+aligned and grouped because more different words were used but less communities are found. Modularity metric confirms it. This effect was found both in
+the english tweets and the italian tweets, disappearing pretty quickly in the 4th week. Further confirmation is needed by using the results of sentiment
+analysis, we need to understand if this shift in people's thought was positive or negative.
 
 4. The hashtags network
+Since it's impossible to build a network of users because we would have no means to link them (we don't have full conversations between users since we
+only gathered tweets containing certain keywords), we thought of extracting hashtags and see whether they were more used in "positive" tweets or "negative" 
+tweets week by week. (...)
 
 WHAT NEEDS TO BE DONE
+Everyone should perform some kind of analyis on the results or comparison between the effects on the considered artists. This is because we have to
+send a quite lengthy report (just go look at the example of past reports on Moodle) and we need to talk 5 minutes each during the presentation.
+Each one of us needs something to talk about, so I thought of some analysis ideas:
+- Someone should replicate the modularity analysis I did on Maneskin tweets for the other 5 artists and see if the effect is common. (Alex?)
+- Someone could make graphs out of Edo's hashtag networks (... expand the idea) and analyse how these hashtags were used across the weeks (if more in a 
+positive or negative way)
 
 NOTES
