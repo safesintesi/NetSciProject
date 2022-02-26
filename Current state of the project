@@ -15,7 +15,7 @@ All tweets are available in the "tweets" folder.
 Sentiment analysis of the english tweets has been automatically performed by the LIWC. The results can be found in the results_liwc.zip file.
 For italian tweets, the tone of each tweet has been calculated with a script that averaged on the sentiment of each (relevant) word, that being
 obtained by matching tokenized words with the ones contained in the Sentix dictionary. The .csv with all the italian Maneskin tweets and their respective
-emotional tone can be found in the folder (TO BE UPLOADED).
+emotional tone can be found in the maneskin_italian_clean_scored_tweets.zip file.
 
 3. The modularity analysis
 Semantic networks have been created for each week of Maneskin tweets, both italian and english. The nodes are the words, they include the number of times
@@ -32,14 +32,30 @@ analysis, we need to understand if this shift in people's thought was positive o
 4. The hashtags network
 Since it's impossible to build a network of users because we would have no means to link them (we don't have full conversations between users since we
 only gathered tweets containing certain keywords), we thought of extracting hashtags and see whether they were more used in "positive" tweets or "negative" 
-tweets week by week. (...)
+tweets week by week. The procedure has been the following: hashtags have been extracted from each week and per each artist. Then, a score has been computed
+for each hashtag by averaging on the emotional tones of the tweets it appears in during that week. Basically the output of this process is, for each
+artist, a list of hashtags for each week with a score that represents the tone they have been prevalently associated to. IF this tone is more polarized
+towards negativity or positivity during the 2nd/3rd week (especially 3rd), we have proven our point for that artist, so an alignment in opinion towards him
+has happened and these opinions are polarized. This needs to be investigated. The english scored hashtags for every artist can be found in the tags.zip file.
+The italian hashtags for Maneskin will be treated in the same way and uploaded in the italian_tags.zip file.
 
 WHAT NEEDS TO BE DONE
 Everyone should perform some kind of analyis on the results or comparison between the effects on the considered artists. This is because we have to
 send a quite lengthy report (just go look at the example of past reports on Moodle) and we need to talk 5 minutes each during the presentation.
 Each one of us needs something to talk about, so I thought of some analysis ideas:
 - Someone should replicate the modularity analysis I did on Maneskin tweets for the other 5 artists and see if the effect is common. (Alex?)
-- Someone could make graphs out of Edo's hashtag networks (... expand the idea) and analyse how these hashtags were used across the weeks (if more in a 
-positive or negative way)
+- Someone could make graphs out of Edo's hashtag analysis and study how these hashtags were used across the weeks (if more in a positive or 
+negative way) to try and see if that matches the outcome of the modularity analysis like explained above. This should also be verified for italian
+hashtags.
+
+I also think that the above ideas can be carried out in groups of two people.
 
 NOTES
+It's important to remember that LIWC result files don't contain all the tweets, but just the ones in english language. Whenever a metric has to be calculated
+on the entire set of tweets related to an artist, the raw tweets contained in the "artistname.pkl" file in the "tweets" folder are the ones that should be 
+used.
+
+Also, I think that writing the report will be very time consuming. We need to start writing along with the final analyses otherwise we won't make it in time.
+From what I've seen, a report of about 20 pages should do it. The longer the better though. But writing it and explaining the results will require the
+construction of many diagrams/graphs/etc. so it will take time. We need to start working on it ASAP, if everyone contributes with a section about what they
+did we can make it in time.
