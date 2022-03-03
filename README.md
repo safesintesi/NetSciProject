@@ -46,7 +46,8 @@ The italian hashtags for Maneskin will be treated in the same way and uploaded i
 Everyone should perform some kind of analyis on the results or comparison between the effects on the considered artists. This is because we have to
 send a quite lengthy report (just go look at the example of past reports on Moodle) and we need to talk 5 minutes each during the presentation.
 Each one of us needs something to talk about, so I thought of some analysis ideas:
-- Someone should replicate the modularity analysis I did on Maneskin tweets for the other 5 artists and see if the effect is common. (Alex?)
+- Someone should replicate the modularity analysis I did on Maneskin tweets for the other 5 artists and see if the effect is common. Node lists
+  and edge lists for every artist are in the "node lists and edge lists.zip" file. (Alex?)
 - Someone could make graphs out of Edo's hashtag analysis and study how these hashtags were used across the weeks (if more in a positive or 
 negative way) to try and see if that matches the outcome of the modularity analysis like explained above. This should also be verified for italian
 hashtags.
